@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+        apiKey: 'AIzaSyCDM7qfznbcvUlOsuQGcnwf_Qa6ottbaRc',
+        authDomain: 'movie-rater-c6225.firebaseapp.com',
+        databaseURL: 'https://movie-rater-c6225.firebaseio.com',
+        storageBucket: 'movie-rater-c6225.appspot.com'
+    },
     modulePrefix: 'movie-rating-ember',
     environment: environment,
     rootURL: '/',
