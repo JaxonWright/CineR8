@@ -1,5 +1,37 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<!--NAV BAR-->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="margin: 8px 8px -8px 0px; padding: 0px 0px 0px 0px;"><img src="//i.imgur.com/L4BZoQ5.png" height="65%"/></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="well well-sm col-lg-6 col-md-6 col-sm-5" style="margin: 0.6% 0px 8px 10%; padding: 0px 8px 0px 8px;">
+                <form role="search">
+                    <div class="form-group form-group-lg float-lg-middle" style="margin: 0px 0px -10px 0px; padding: 0px 0px 0px 0px;">
+                        <input type="text" class="form-control col-md-12" placeholder="Search" name="search" id="search">
+                    </div>
+                </form>
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 80px;">
+                <li class="float-lg-right">
+                    <a id="usernameNav" href="#userRating"></a>
+                </li>
+                <li class="float-lg-right">
+                    <a id="loginNav" href="/login" data-target="#" class="dropdown-toggle" data-toggle="user">Log In</a>
+                </li>
+                <li class="float-lg-right">
+                    <a id="logoutNav" href="#logout" data-target="#" class="dropdown-toggle hidden" data-toggle="user">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--END NAV BAR-->
+<div class="container" id="body">
+    {{outlet}}
+</div>

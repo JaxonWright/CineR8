@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "movie-rater-c6225",
+    "staging": "movie-rater-c6225"
+  }
+}

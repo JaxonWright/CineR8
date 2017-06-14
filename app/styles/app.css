@@ -1,0 +1,65 @@
+body { 
+    padding-top: 82px; 
+}
+
+.poster {
+    margin:8px;
+    width:190px; 
+    height:274px;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.posterWithRating {
+    position: relative;
+}
+
+.overlay { 
+   position: absolute; 
+   top: -128px;
+   width: auto;
+   right: 0;
+   margin-right: 11px;
+   text-align: right;
+   padding: 8px;
+   color: white; 
+   background: rgb(0, 0, 0); /* fallback color */
+   background: #455a64;
+   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .poster {
+        margin: 0px;
+    }
+    .overlay {
+        margin-right: 3px;
+    }
+}
+
+.navbar-default {
+    background-color: #607D8B !important;
+}
+
+.panel-primary>.panel-heading {
+    background-color: #455A64 !important;
+}
+
+.panel-body#imdbRating, .panel-body#avgUserRating  {
+    padding: 0px;
+}
+
+.btn-primary.btn-raised {
+    background-color: #455A64 !important;
+}
+
+.btn-primary#createUser {
+    color: #455A64 !important;
+}
+
+.btn img {
+    float: left;
+    margin-left: -20px;
+    margin-right: 8px;
+}
