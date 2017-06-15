@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
                             username: self.get('session.currentUser.email')
                         });
                         newUser.save();
-                    } 
+                    }
                  });
                 self.transitionToRoute('index');
             }, function() {

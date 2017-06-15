@@ -13,5 +13,19 @@ export default Ember.Route.extend({
     signOut: function() {
       this.get('session').close();
     }
+  },
+  model() {
+      var self = this;
+      return {
+          username: Ember.computed(function() {
+            var uid = self.get('session.currentUser.uid');
+            self.store.query('user', {
+                 orderBy: 'email',
+                 equalTo: self.get('session.currentUser.email')
+            });
+              //TODO: SOMEHOW RETURN THE USERNAME HERE
+              //self.store.findRecord('username')
+          })
+      }
   }
 });
