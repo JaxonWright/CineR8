@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
             var password2 = document.getElementById("password2").value;
             
             if (this.passIsValid(password, password2) && this.usernameIsValid(username) && this.emailIsValid(email)){
-                //this.get('firebaseApp').auth().createUserWithEmailAndPassword(email,password);
+               //TODO: AUTHENTICATE
                 var newUser = this.store.createRecord('user', {
                     email: email,
                     username: username
