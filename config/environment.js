@@ -8,6 +8,9 @@ module.exports = function(environment) {
         databaseURL: 'https://movie-rater-c6225.firebaseio.com',
         storageBucket: 'movie-rater-c6225.appspot.com'
     },
+    torii: {
+        sessionServiceName: 'session'
+    },
     modulePrefix: 'movie-rating-ember',
     environment: environment,
     rootURL: '/',

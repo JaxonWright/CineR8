@@ -18,15 +18,18 @@
                 </form>
             </div>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 80px;">
-                {{#link-to 'user' tagName="li" class="float-lg-right"}}
-                    <a id="usernameNav"></a>
-                {{/link-to}}
-                {{#link-to 'login' tagName="li" class="float-lg-right"}}
-                    <a id="loginNav" class="dropdown-toggle" data-toggle="user">Log In</a>
-                {{/link-to}}
-                <li class="float-lg-right">
-                    <a id="logoutNav" href="#logout" data-target="#" class="dropdown-toggle hidden" data-toggle="user">Log Out</a>
-                </li>
+                {{#if session.isAuthenticated}}
+                    {{#link-to 'user' tagName="li" class="float-lg-right"}}
+                        <a id="usernameNav">{{session.currentUser.displayName}}</a>
+                    {{/link-to}}
+                    <li class="float-lg-right"  {{action "signOut"}}>
+                        <a class="dropdown-toggle">Log Out</a>
+                    </li>
+                {{else}}
+                    {{#link-to 'login' tagName="li" class="float-lg-right"}}
+                        <a class="dropdown-toggle">Log In</a>
+                    {{/link-to}}
+                {{/if}}
             </ul>
         </div>
     </div>

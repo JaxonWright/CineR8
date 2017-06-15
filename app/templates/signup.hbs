@@ -1,0 +1,29 @@
+<h2>Signup</h2>
+
+<div class="well col-md-6">
+    <div id="usernameInput" class="form-group label-floating">
+        <label class="control-label" for="username">Email</label>
+        <input class="form-control form-control-danger" id="email" type="text">
+        <span id="help" class="help-block hidden">Sorry, that email's taken. Try another</span>
+    </div>
+    
+     <div id="usernameInput" class="form-group label-floating">
+        <label class="control-label" for="username">Username</label>
+        <input class="form-control form-control-danger" id="username" type="text">
+        <span id="help" class="help-block hidden">Sorry, that username's taken. Try another</span>
+    </div>
+
+    <div id="passwordInput" class="form-group label-floating">
+        <label class="control-label" for="password">Password</label>
+        <input class="form-control" id="password" type="password"/>
+        <span id="helpPass" class="help-block hidden">Password is not secure enough</span>
+    </div>
+    
+        <div id="passwordInput" class="form-group label-floating">
+        <label class="control-label" for="password">Repeat Password</label>
+        <input class="form-control" id="password" type="password"/>
+        <span id="helpPass2" class="help-block hidden">Passwords don't match. Try again</span>
+    </div>
+
+    <button {{action 'createUser'}} class="btn btn-primary btn-raised">Create</button>
+</div>

@@ -2,8 +2,8 @@
 
 <div class="well col-md-6">
     <div id="usernameInput" class="form-group label-floating">
-        <label class="control-label" for="username">Username</label>
-        <input class="form-control form-control-danger" id="username" type="text">
+        <label class="control-label" for="username">Email</label>
+        <input class="form-control form-control-danger" id="email" type="text">
         <span id="help" class="help-block hidden">Sorry, that username's taken. Try another?</span>
     </div>
 
@@ -13,10 +13,10 @@
         <span id="helpPass" class="help-block hidden">Incorrect username and/or password</span>
     </div>
 
-    <button id="createUser" class="btn btn-primary">Create User</button>
-    <button id="login" class="btn btn-primary btn-raised">Login</button>
+    {{#link-to 'signup'}}<button class="btn btn-primary">Sign Up</button>{{/link-to}}
+    <button {{action 'loginWithEmail'}} class="btn btn-primary btn-raised">Login</button>
     &nbsp;or&nbsp;     
-    <button id="loginGoogle" class="btn btn-secondary btn-raised">
+    <button {{action 'loginWithGoogle'}} class="btn btn-secondary btn-raised">
         <img src="images/googleG.png" width="20"/>
         Login With Google
     </button>
