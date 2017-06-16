@@ -10,6 +10,8 @@ export default Ember.Route.extend({
     }
   },
   model(params) {
-    return this.store.findRecord('user', this.get('session.currentUser.uid'));
+    if (this.get('session.isAuthenticated')){
+      return this.store.findRecord('user', this.get('session.currentUser.uid'));
+    }
   }
 });
