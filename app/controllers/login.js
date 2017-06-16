@@ -22,6 +22,7 @@ export default Ember.Controller.extend({
                         });
                         newUser.save();
                     }
+
                  });
                 self.transitionToRoute('index');
             }, function() {

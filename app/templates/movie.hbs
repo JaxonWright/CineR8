@@ -19,7 +19,8 @@
             <center><h2 id="avg"><strong>0</strong>/5</h2></center>
           </div>
        </div>
-       <div id="userRating" class="panel panel-primary hidden">
+       {{#if session.isAuthenticated}}
+       <div id="userRating" class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Your Rating</h3>
           </div>
@@ -27,5 +28,6 @@
             <div id="rateYo" class="jq-ry-container" style="width: 125px;"></div>
           </div>
        </div>
+       {{/if}}
     </div>
 </div>
