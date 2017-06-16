@@ -20,7 +20,7 @@
             <ul class="nav navbar-nav navbar-right" style="margin-right: 80px;">
                 {{#if session.isAuthenticated}}
                     {{#link-to 'user' tagName="li" class="float-lg-right"}}
-                        <a id="usernameNav"></a>
+                        <a id="usernameNav">{{model.username}}</a>
                     {{/link-to}}
                     <li class="float-lg-right"  {{action "signOut"}}>
                         <a class="dropdown-toggle">Log Out</a>

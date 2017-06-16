@@ -8,5 +8,8 @@ export default Ember.Route.extend({
     signOut: function() {
       this.get('session').close();
     }
+  },
+  model(params) {
+    return this.store.findRecord('user', this.get('session.currentUser.uid'));
   }
 });

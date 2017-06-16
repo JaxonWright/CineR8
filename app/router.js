@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('movie', {path: '/movie/:id'});
+  this.route('movie', {path: '/movie/:movie_id'});
   this.route('login');
   this.route('user');//, {path: '/user/:user_id'});
   this.route('show');//, {path: '/show/:show_id'});
