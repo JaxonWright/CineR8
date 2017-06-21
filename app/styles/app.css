@@ -1,5 +1,19 @@
 body { 
-    padding-top: 82px; 
+    padding-top: 82px;
+}
+
+footer {
+    padding-top: 40px;
+    border-top: 3px solid #c7c7c7;
+    background-color: #d8d8d8;
+    padding-bottom: 20px;
+    color: #aaaaaa;
+}
+footer a {
+    color: #aaaaaa;
+}
+footer a:hover {
+   color: #607D8B;
 }
 
 .poster {
