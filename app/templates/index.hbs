@@ -1,1 +1,12 @@
-<h1>Index</h1>
+<h1>Most Popular</h1>
+<ul>
+{{#each model.mostPopular.results as |result|}}
+    <li>{{result.title}}</li>
+{{/each}}
+</ul>
+<h1>Highest Rated</h1>
+<ul>
+{{#each model.highestRated.results as |result|}}
+    <li>{{result.title}}</li>
+{{/each}}
+</ul>
