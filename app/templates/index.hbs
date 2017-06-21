@@ -1,12 +1,12 @@
-<h1>Most Popular</h1>
-<ul>
-{{#each model.mostPopular.results as |result|}}
-    <li>{{result.title}}</li>
+<h1>Popular Now</h1>
+{{#each model.popularNow.results as |result|}}
+    <a href="/movie/{{result.id}}">
+        <img class='poster' src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}"/>
+    </a>
 {{/each}}
-</ul>
-<h1>Highest Rated</h1>
-<ul>
+<h1><img src="/images/theMovieDbLogoBlue.png" height="35px"/> Highest Rated</h1>
 {{#each model.highestRated.results as |result|}}
-    <li>{{result.title}}</li>
+    <a href="/movie/{{result.id}}">
+        <img class='poster' src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}"/>
+    </a>
 {{/each}}
-</ul>
