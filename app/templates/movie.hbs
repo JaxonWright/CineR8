@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-md-3 col-sm-4">
-      <img id="poster" class="poster" alt="poster" src="{{model.poster}}" width="190px" height="274px">
+      <img id="poster" class="poster" alt="poster" src="https://image.tmdb.org/t/p/w185/{{model.movie.poster_path}}" width="190px" height="274px">
     </div>
     <div class="col-lg-7 col-md-6 col-sm-5">
-      <h3 id="title">{{model.title}}</h3>
-      <p id="description">{{model.description}}</p>
+      <h3 id="title">{{model.movie.title}}</h3>
+      <p id="description">{{model.movie.overview}}</p>
     </div>
     <div class="col-lg-2 col-md-3 col-sm-3">
        <div class="panel panel-default">
@@ -18,7 +18,7 @@
             <h3 class="panel-title">Avg User Rating</h3>
           </div>
           <div class="panel-body" id="avgUserRating">
-            <center><h2 id="avg"><strong>0</strong>/5</h2></center>
+            <center><h2 id="avg"><strong>{{model.movie.vote_average}}</strong>/10</h2></center>
           </div>
        </div>
        {{#if session.isAuthenticated}}
@@ -27,7 +27,7 @@
             <h3 class="panel-title">Your Rating</h3>
           </div>
           <div class="panel-body" id="userRating">
-            <div id="rateYo" class="jq-ry-container" style="width: 125px;"></div>
+            {{star-rating item=model rating=model.rating on-click=(action "updateRating")}}
           </div>
        </div>
        {{/if}}
