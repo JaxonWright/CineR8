@@ -3,6 +3,7 @@ body {
 }
 
 footer {
+    margin-top: 40px;
     padding-top: 40px;
     border-top: 3px solid #c7c7c7;
     background-color: #d8d8d8;
