@@ -16,3 +16,9 @@ The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust J
 * [Bootstrap](http://getbootstrap.com/)
 * [Material Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/)
 
+### Can I Use This Code?
+Sure, you can use this code or any piece of the code. This project is licensed under MIT, allowing you to basically do whatever you want. However, what would be more beneficial is you can make improvements directly to this project by submitting a pull request.
+
+Why This Project Was Created
+-----------
+I know that there are bigger and arguably better services that do the same thing as CineR8. My motivation behind creating this web application was mainly to learn Ember.js, but I also wanted something simpler than the well-known services. I think that I acheived both goals and look forward to what this project will become over time.
