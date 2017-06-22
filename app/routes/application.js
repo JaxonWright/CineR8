@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       this.get('session').close();
     }
   },
-  model(params) {
+  model() {
     if (this.get('session.isAuthenticated')){
       return this.store.findRecord('user', this.get('session.currentUser.uid'));
     }
