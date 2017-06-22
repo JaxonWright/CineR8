@@ -1,5 +1,4 @@
-<img src="https://github.com/JaxonWright/CineR8/blob/master/public/images/logoDark.png?raw=true" width="200px"/>
-
+<img src="https://github.com/JaxonWright/CineR8/blob/master/public/images/logoDark.png?raw=true" width="200px"/><img src="https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png" width="200px" style="float:right;"/>
 
 Description
 -----------
@@ -10,4 +9,4 @@ Technical Details
 The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust Javascript framework. All of the movie information is pulled from [TheMovieDB](https://www.themoviedb.org/) via their API. User authentication and ratings are stored using Google's [Firebase](https://firebase.google.com) real-time database. The only personal information stored is the user's email, of which is not visible to others and is not shared by CineR8 anywhere.
 
 
-<img src="https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png" width="200px"/>
+
