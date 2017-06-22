@@ -1,5 +1,5 @@
 {
-  "firebase": "movie-rater",
+  "firebase": "CineR8",
   "public": "./dist",
   "ignore": [
     "firebase.json",
