@@ -7,9 +7,12 @@ CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very clea
 Screenshots
 ----------
 ### Home Page
-<img src="http://i.imgur.com/nqXFsRD.jpg"/>
+<img src="http://i.imgur.com/kmR7Zmi.jpg"/>
 
-### Movie Listing
+### Search Results Page
+<img src="http://i.imgur.com/jJQ1ZyL.jpg"/>
+
+### Movie Listing Page
 ...will be here when design is finalized
 ### User Page
 ...will be here when design is finalized
