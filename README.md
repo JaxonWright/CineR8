@@ -26,6 +26,7 @@ The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust J
 ### Ember Addons Used
 * [ember-cli](https://ember-cli.com/) - Commandline Interface for Ember
 * [emberfire](https://www.npmjs.com/package/emberfire) - Gives the ability to use Ember Models as Firebase database entries
+* [emberfire-utils](https://www.npmjs.com/package/emberfire-utils) - Adds functionality on top of emberfire to make things easier
 
 ### Other Addons
 * [Bootstrap](http://getbootstrap.com/)
