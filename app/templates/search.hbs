@@ -1,0 +1,8 @@
+<h1>Search results for '{{model.query}}'</h1>
+{{#each model.search.results as |result|}}
+    {{#link-to 'movie' result.id}}
+        {{#if result.poster_path}}
+            <img class='poster' src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}"/>
+        {{/if}}
+    {{/link-to}}
+{{/each}}

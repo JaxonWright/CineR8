@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('user');//, {path: '/user/:user_id'});
   this.route('show');//, {path: '/show/:show_id'});
   this.route('signup');
+  this.route('search');
 });
 
 export default Router;
