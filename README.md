@@ -1,8 +1,20 @@
-<img src="https://github.com/JaxonWright/CineR8/blob/master/public/images/logoDark.png?raw=true" width="200px" align="left"/><img src="https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png" width="200px" align="right"/>
+<img src="https://github.com/JaxonWright/CineR8/blob/master/public/images/logoMain.png?raw=true" width="200px" align="left"/><img src="https://www.themoviedb.org/assets/static_cache/bb45549239e25f1770d5f76727bcd7c0/images/v4/logos/408x161-powered-by-rectangle-blue.png" width="200px" align="right"/>
 <br/><br/><br/><br/>
 Description
 -----------
 CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very cleanly designed movie rating web application. The design tries to follow Google's Material Design guidelines as best as possible, which makes it look as clean as it does. There are no advertisements or obnoxious elements that hamper the user experience for what should be a simple web application.
+
+Screenshots
+----------
+### Home Page
+<img src="http://i.imgur.com/nqXFsRD.jpg"/>
+
+### Movie Listing
+...will be here when design is finalized
+### User Page
+...will be here when design is finalized
+### Login Page
+...will be here when design is finalized
 
 Technical Details
 -----------
