@@ -1,20 +1,33 @@
 body { 
     padding-top: 82px;
+    background-color: #d0dde6;
+}
+
+.search-form {
+ margin: 0.9% 8px 8px 10%; 
+ padding: 0px 0px 0px 8px;
+ background: rgba(255,255,255,.13);
+}
+
+.search-input {
+    color: white; 
+    background: rgba(255,255,255,.00) !important;
+    margin-bottom: 0px !important;
 }
 
 footer {
     margin-top: 40px;
     padding-top: 40px;
-    border-top: 3px solid #c7c7c7;
-    background-color: #d8d8d8;
+    border-top: 3px solid #abb5bd;
+    background-color: #bcc7cf;
     padding-bottom: 20px;
-    color: #aaaaaa;
+    color: #9ca6ad;
 }
 footer a {
-    color: #aaaaaa;
+    color: #9ca6ad;
 }
 footer a:hover {
-   color: #607D8B;
+   color: #09314b;
 }
 
 .poster {
@@ -54,11 +67,11 @@ footer a:hover {
 }
 
 .navbar-default {
-    background-color: #607D8B !important;
+    background-color: #09314b !important;
 }
 
 .panel-primary>.panel-heading {
-    background-color: #455A64 !important;
+    background-color: #09314b !important;
 }
 
 .panel-body#imdbRating, .panel-body#avgUserRating  {
@@ -66,11 +79,11 @@ footer a:hover {
 }
 
 .btn-primary.btn-raised {
-    background-color: #455A64 !important;
+    background-color: #09314b !important;
 }
 
 .btn-primary#createUser {
-    color: #455A64 !important;
+    color: #09314b !important;
 }
 
 .btn img {
