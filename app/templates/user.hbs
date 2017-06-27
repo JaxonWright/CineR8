@@ -1,1 +1,5 @@
-<h2>User</h2>
+{{#if model.username}}
+    <h2>{{model.username}}</h2>
+{{else}}
+    <h2>Unknown User</h2>
+{{/if}}

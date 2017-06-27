@@ -9,7 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('movie', {path: '/movie/:movie_id'});
   this.route('login');
-  this.route('user');//, {path: '/user/:user_id'});
+  this.route('user', {path: '/user/:username'});
   this.route('show');//, {path: '/show/:show_id'});
   this.route('signup');
   this.route('search');

@@ -25,8 +25,8 @@ export default Ember.Controller.extend({
 
                  });
                 self.transitionToRoute('index');
-            }, function() {
-                alert("Can't sign in with Google");
+            }, error => {
+                alert(error);
             });
             
         },
