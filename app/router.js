@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('show');//, {path: '/show/:show_id'});
   this.route('signup');
   this.route('search');
+  this.route('privacy-policy');
 });
 
 export default Router;
