@@ -13,7 +13,8 @@ Screenshots
 <img src="http://i.imgur.com/jJQ1ZyL.jpg"/>
 
 ### Movie Listing Page
-...will be here when design is finalized
+<img src="http://i.imgur.com/MeamR3u.png"/>
+
 ### User Page
 ...will be here when design is finalized
 ### Login Page
