@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('signup');
   this.route('search');
   this.route('privacy-policy');
+  this.route('about');
+  this.route('donate');
 });
 
 export default Router;
