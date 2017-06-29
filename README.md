@@ -2,7 +2,7 @@
 <br/><br/><br/><br/>
 Description
 -----------
-CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very cleanly designed movie rating web application. The design tries to follow Google's Material Design guidelines as best as possible, which makes it look as clean as it does. There are no advertisements or obnoxious elements that hamper the user experience for what should be a simple web application.
+CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very cleanly designed movie rating web application. The design tries to follow Google's Material Design guidelines as best as possible, which makes it look as clean as it does. There are no advertisements or obnoxious elements that hamper the user experience for what should be a simple web application. Check it out now at [CineR8.com](https://ciner8.com)! For now, you must use Google sign in, as email sign up is currently broken.
 
 Screenshots
 ----------
