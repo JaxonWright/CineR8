@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
     actions: {
         loginWithGoogle: function(){
             var self = this;
@@ -18,13 +17,13 @@ export default Ember.Controller.extend({
                         var newUser = self.store.createRecord('user', {
                             id: self.get('session.currentUser.uid'),
                             email: self.get('session.currentUser.email'),
-                            username: self.get('session.currentUser.email')
+                            username: self.get('session.currentUser.email').split('@')[0]
                         });
                         newUser.save();
                     }
 
                  });
-                self.transitionToRoute('index');
+                self.transitionToRoute('application');
             }, error => {
                 alert(error);
             });
@@ -39,7 +38,7 @@ export default Ember.Controller.extend({
                 email: email,
                 password: pass
             }).then(function() {
-                self.transitionToRoute('index')
+                self.transitionToRoute('application')
             }, function() {
                 alert("Failure");
             });

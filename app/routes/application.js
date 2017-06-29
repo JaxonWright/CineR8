@@ -7,6 +7,11 @@ export default Ember.Route.extend({
   actions: {
     signOut: function() {
       this.get('session').close();
+    },
+    refreshModel: function() {
+      if (this.get('session.isAuthenticated')){
+        this.refresh();
+      }
     }
   },
   model() {

@@ -16,7 +16,7 @@ export default Ember.Controller.extend({
                     email: email,
                     username: username
                 });
-                newUser.save();
+                newUser.save().catch(error => { alert(error);} );
             }
         }
     },

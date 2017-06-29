@@ -8,6 +8,9 @@ export default Ember.Controller.extend({
             document.getElementById("searchInput").value = "";
             this.transitionToRoute('search', {queryParams: {value: value}});
         }
-    }
+    },
+    observeSession: function() {
+        this.send("refreshModel");
+    }.observes("session.isAuthenticated")
    
 });
