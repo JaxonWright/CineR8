@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
                 email: email,
                 password: pass
             }).then(function() {
-                self.transitionToRoute('application')
+                self.transitionToRoute('application');
             }, function() {
                 alert("Failure");
             });

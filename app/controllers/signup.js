@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 
 export default Ember.Controller.extend({
-    firebase: Ember.inject.service(),
+    firebaseApp: Ember.inject.service(),
     actions: {
         signUp: function() {
             var email = document.getElementById("email").value;
@@ -11,12 +11,27 @@ export default Ember.Controller.extend({
             var password2 = document.getElementById("password2").value;
             
             if (this.passIsValid(password, password2) && this.usernameIsValid(username) && this.emailIsValid(email)){
-               //TODO: AUTHENTICATE
-                var newUser = this.store.createRecord('user', {
-                    email: email,
-                    username: username
-                });
-                newUser.save().catch(error => { alert(error);} );
+               var self = this;
+               this.get('firebaseApp').auth().createUserWithEmailAndPassword(email, password).then(result => {
+                    var newUser = self.store.createRecord('user', {
+                        id: result.uid,
+                        email: email,
+                        username: username
+                    });
+                    newUser.save();
+
+                    self.get('session').open('firebase', {
+                        provider: 'password',
+                        email: email,
+                        password: password
+                    }).then(function() {
+                        self.transitionToRoute('application');
+                    }, function() {
+                        alert("Failure");
+                    });
+               }).catch(error => {
+                   alert(error);
+               })
             }
         }
     },
