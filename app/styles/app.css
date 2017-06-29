@@ -9,6 +9,14 @@ body {
  background: rgba(255,255,255,.13);
 }
 
+h2.userRating {
+    margin: 0px 0px 0px 0px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
 @media (max-width: 767px) {
     .navbar-collapse:after {
         clear:both;
