@@ -7,16 +7,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {{#link-to 'index'}}<a class="navbar-brand" style="margin: 8px 8px -8px 0px; padding: 0px 0px 0px 0px;"><img src="/images/logoLight.png" height="70%"/></a>{{/link-to}}
+            {{#link-to 'index'}}<a class="navbar-brand" ><img src="/images/logoLight.png" height="100%"/></a>{{/link-to}}
+        </div>
+        <div class="float-lg-middle col-lg-6 col-md-6 col-sm-5 search-form">
+            {{input type="text" id="searchInput" class="form-control col-md-12 search-input" placeholder="Search" enter="querySearch"}}
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-                <div class="form-group form-group-md float-lg-middle col-lg-6 col-md-6 col-sm-5 search-form">
-                    {{input type="text" id="searchInput" class="form-control col-md-12 search-input" placeholder="Search" enter="querySearch"}}
-                </div>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 80px;">
                 {{#if session.isAuthenticated}}
                     {{#link-to 'user' model.username tagName="li" class="float-lg-right"}}
-                        <a id="usernameNav">{{model.username}}</a>
+                        <a class="dropdown-toggle">{{model.username}}</a>
                     {{/link-to}}
                     <li class="float-lg-right"  {{action "signOut"}}>
                         <a class="dropdown-toggle">Log Out</a>
@@ -55,3 +55,20 @@
         </div>
     </div>
 </footer>
+
+{{!--Load scripts at end for faster performance--}}
+<!--Jquery-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+<script>
+    $("#dropdown-menu select").dropdown();
+    $('.navbar-collapse a').click(function() {
+        $(".navbar-collapse").collapse('hide');
+    });
+</script>
+
