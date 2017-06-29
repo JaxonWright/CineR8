@@ -7,18 +7,19 @@ CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very clea
 Screenshots
 ----------
 ### Home Page
-<img src="http://i.imgur.com/kmR7Zmi.jpg"/>
+<img src="http://i.imgur.com/wQAyNnQ.jpg"/>
 
 ### Search Results Page
-<img src="http://i.imgur.com/jJQ1ZyL.jpg"/>
+<img src="http://i.imgur.com/ThJ8PVW.png"/>
 
 ### Movie Listing Page
-<img src="http://i.imgur.com/MeamR3u.png"/>
+<img src="http://i.imgur.com/s7uyH3X.png"/>
 
 ### User Page
-...will be here when design is finalized
+<img src="http://i.imgur.com/he1IsXT.png"/>
+
 ### Login Page
-...will be here when design is finalized
+<img src="http://i.imgur.com/7FTCpHA.png"/>
 
 Technical Details
 -----------
@@ -28,6 +29,7 @@ The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust J
 * [ember-cli](https://ember-cli.com/) - Commandline Interface for Ember
 * [emberfire](https://www.npmjs.com/package/emberfire) - Gives the ability to use Ember Models as Firebase database entries
 * [emberfire-utils](https://www.npmjs.com/package/emberfire-utils) - Adds functionality on top of emberfire to make things easier
+* [ember-cli-star-rating](https://www.npmjs.com/package/ember-cli-star-rating) - Adds easy star rating functionality for users
 
 ### Other Addons
 * [Bootstrap](http://getbootstrap.com/)
