@@ -1,12 +1,16 @@
-<h1>Popular Now</h1>
+<h1><img src="/images/theMovieDbLogoBlue.png" height="35px"/> Popular Now</h1>
+<center>
 {{#each model.popularNow.results as |result|}}
     {{#link-to 'movie' result.id}}
         <img class='poster' src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}"/>
     {{/link-to}}
 {{/each}}
+</center>
 <h1><img src="/images/theMovieDbLogoBlue.png" height="35px"/> Highest Rated</h1>
+<center>
 {{#each model.highestRated.results as |result|}}
     {{#link-to 'movie' result.id}}
         <img class='poster' src="https://image.tmdb.org/t/p/w185/{{result.poster_path}}"/>
     {{/link-to}}
 {{/each}}
+</center>

@@ -9,11 +9,28 @@ body {
  background: rgba(255,255,255,.13);
 }
 
+@media (max-width: 767px) {
+    .navbar-collapse:after {
+        clear:both;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-collapse:after {
+        clear:none;
+    }
+}
+
+
 .search-input {
     text-indent: 8px;
     color: white; 
     background: rgba(255,255,255,.00) !important;
     margin-bottom: 0px !important;
+}
+
+.form-control.search-input:focus {
+  border-color: #d0dde6;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 15px rgba(208, 221, 230, 0.8);
 }
 
 footer {
