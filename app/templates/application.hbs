@@ -16,7 +16,7 @@
             </div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right" style="margin-right: 80px;">
+            <ul class="nav navbar-nav navbar-right">
                 {{#if session.isAuthenticated}}
                     {{#link-to 'user' model.username tagName="li" class="float-lg-right"}}
                         <a class="dropdown-toggle">{{model.username}}</a>
@@ -56,21 +56,27 @@
            &bullet;
            <a href="https://github.com/JaxonWright/movie-rater-ember/issues">Report Issues</a>
         </div>
-    </div>
+    </div> 
 </footer>
 
 {{!--Load scripts at end for faster performance--}}
 <!--Jquery-->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.0.min.js"></script>
-<script type="text/javascript" src="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+
 <!-- Bootstrap -->
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+<script type="text/javascript" src="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
 <script>
-    $("#dropdown-menu select").dropdown();
     $('.navbar-collapse a').click(function() {
         $(".navbar-collapse").collapse('hide');
+    });
+     $('.navbar-brand').click(function() {
+        $(".navbar-collapse").collapse('hide');
+    });
+    $("#searchInput" ).on( "keydown", function(event) {
+        if(event.which == 13) 
+            $(".navbar-collapse").collapse('hide');
     });
 </script>
 
