@@ -3,8 +3,21 @@
       <img id="poster" class="poster" alt="poster" src="https://image.tmdb.org/t/p/w185/{{model.movie.poster_path}}" width="190px" height="274px">
     </div>
     <div class="col-lg-7 col-md-6 col-sm-5">
-      <h3 id="title">{{model.movie.title}}</h3>
+      <h3 id="title"><strong>{{model.movie.title}}</strong></h3>
+      <h4 id="tag">{{model.movie.tagline}}</h4>
       <p id="description">{{model.movie.overview}}</p>
+      <br/>
+      <p id="runtime"><strong>Runtime: </strong>{{model.movie.runtime}} minutes</p>
+      <p id="release"><strong>Release Date: </strong>{{moment-format model.movie.release_date 'MMMM DD, YYYY' 'YYYY-MM-DD'}}</p>
+      <p id="genres"><strong>Genres: </strong>
+      {{#each model.movie.genres as |genre index|}}
+        {{if index '• '}}{{genre.name}}
+      {{/each}}</p>
+      <p id="trailers"><strong>Trailers: </strong>
+         {{#each model.movie.videos.results as |video index|}}
+            {{if index '• '}}<a href="//youtube.com/watch?v={{video.key}}">{{index}}</a>
+        {{/each}}
+      </p>
     </div>
     <div class="col-lg-2 col-md-3 col-sm-3">
        <div class="panel panel-default">
