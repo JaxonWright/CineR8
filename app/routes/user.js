@@ -5,9 +5,6 @@ export default Ember.Route.extend({
         return this.store.query('user', {
             orderBy: 'username',
             equalTo: params.username
-        })
-    },
-    setupController: function(controller, model) {
-        controller.set('model', model.get('firstObject'));
+        }).then((model) => model.get('firstObject'))
     }
 });
