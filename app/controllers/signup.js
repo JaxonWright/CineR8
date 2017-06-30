@@ -13,6 +13,7 @@ export default Ember.Controller.extend({
             let validLogin = this.passIsValid(password, password2) && this.usernameIsValid(username) && this.emailIsValid(email);
             
             if (validLogin) {
+               var self = this;
                this.get('firebaseApp').auth().createUserWithEmailAndPassword(email, password).then(result => {
                     var newUser = self.store.createRecord('user', {
                         id: result.uid,
@@ -21,12 +22,12 @@ export default Ember.Controller.extend({
                     });
                     newUser.save();
 
-                    this.get('session').open('firebase', {
+                    self.get('session').open('firebase', {
                         provider: 'password',
                         email: email,
                         password: password
                     }).then(() => {
-                        this.transitionToRoute('application');
+                        self.transitionToRoute('application');
                     }, () => {
                         alert("Failure");
                     });
