@@ -4,14 +4,15 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     firebaseApp: Ember.inject.service(),
     actions: {
-        signUp: function() {
+        signUp() {
             var email = document.getElementById("email").value;
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
             var password2 = document.getElementById("password2").value;
+          
+            let validLogin = this.passIsValid(password, password2) && this.usernameIsValid(username) && this.emailIsValid(email);
             
-            if (this.passIsValid(password, password2) && this.usernameIsValid(username) && this.emailIsValid(email)){
-               var self = this;
+            if (validLogin) {
                this.get('firebaseApp').auth().createUserWithEmailAndPassword(email, password).then(result => {
                     var newUser = self.store.createRecord('user', {
                         id: result.uid,
@@ -20,13 +21,13 @@ export default Ember.Controller.extend({
                     });
                     newUser.save();
 
-                    self.get('session').open('firebase', {
+                    this.get('session').open('firebase', {
                         provider: 'password',
                         email: email,
                         password: password
-                    }).then(function() {
-                        self.transitionToRoute('application');
-                    }, function() {
+                    }).then(() => {
+                        this.transitionToRoute('application');
+                    }, () => {
                         alert("Failure");
                     });
                }).catch(error => {
@@ -35,13 +36,13 @@ export default Ember.Controller.extend({
             }
         }
     },
-    passIsValid: function(password, password2) {
+    passIsValid(password, password2) {
         return (password == password2 && password != "");
     },
-    usernameIsValid: function(username) {
+    usernameIsValid(username) {
         return !this.usernameTaken(username);
     },
-    usernameTaken: function(username) {
+    usernameTaken(username) {
         if(username == "") {
             alert("Please enter a username");
             return true;
@@ -57,7 +58,7 @@ export default Ember.Controller.extend({
            return false;
         });
     },
-    emailIsValid: function(email) {
+    emailIsValid(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         
         if (re.test(email) == false) {
@@ -66,8 +67,9 @@ export default Ember.Controller.extend({
         }
         return !this.emailTaken(email);
     }, 
-    emailTaken: function(email) {
-        if(email == "") return true;
+    emailTaken(email) {
+        if (email == "") { return true; }
+
         this.store.query('user', {
                 orderBy: 'email',
                 equalTo: email
