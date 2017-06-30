@@ -10,13 +10,16 @@
       <p id="runtime"><strong>Runtime: </strong>{{model.movie.runtime}} minutes</p>
       <p id="release"><strong>Release Date: </strong>{{moment-format model.movie.release_date 'MMMM DD, YYYY' 'YYYY-MM-DD'}}</p>
       <p id="genres"><strong>Genres: </strong>
-      {{#each model.movie.genres as |genre index|}}
-        {{if index '• '}}{{genre.name}}
-      {{/each}}</p>
-      <p id="trailers"><strong>Trailers: </strong>
-         {{#each model.movie.videos.results as |video index|}}
-            {{if index '• '}}<a href="//youtube.com/watch?v={{video.key}}">{{index}}</a>
+        {{#each model.movie.genres as |genre index|}}
+          {{if index "• "}}  {{genre.name}}
         {{/each}}
+      </p>
+      <p id="trailers"><strong>Trailers:  </strong>
+          <div class="btn-group trailers">
+            {{#each model.movie.videos.results as |video index|}}
+                <a href="//youtube.com/watch?v={{video.key}}" class="btn btn-xs">{{index}}</a>
+            {{/each}}
+          </div>
       </p>
     </div>
     <div class="col-lg-2 col-md-3 col-sm-3">
