@@ -13,7 +13,7 @@ Screenshots
 <img src="http://i.imgur.com/ThJ8PVW.png"/>
 
 ### Movie Listing Page
-<img src="http://i.imgur.com/s7uyH3X.png"/>
+<img src="http://i.imgur.com/6777tp6.png"/>
 
 ### User Page
 <img src="http://i.imgur.com/he1IsXT.png"/>
