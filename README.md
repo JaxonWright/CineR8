@@ -30,6 +30,7 @@ The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust J
 * [emberfire](https://www.npmjs.com/package/emberfire) - Gives the ability to use Ember Models as Firebase database entries
 * [emberfire-utils](https://www.npmjs.com/package/emberfire-utils) - Adds functionality on top of emberfire to make things easier
 * [ember-cli-star-rating](https://www.npmjs.com/package/ember-cli-star-rating) - Adds easy star rating functionality for users
+* [ember-moment](https://www.npmjs.com/package/ember-moment) - Easy way to format date strings
 
 ### Other Addons
 * [Bootstrap](http://getbootstrap.com/)
