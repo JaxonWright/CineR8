@@ -2,13 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
-        updateRating(params) {
-             const { item: model, rating } = params;
-
+        updateRating({ item: { model: { movie } }, rating }) {
              let fanoutObject = {};
-             fanoutObject['users/' + this.get('session.currentUser.uid') + '/ratings/' + model.movie.id + "/value"] = rating;
-             fanoutObject['users/' + this.get('session.currentUser.uid') + '/ratings/' + model.movie.id + "/posterPath"] = model.movie.poster_path;
-             fanoutObject['users/' + this.get('session.currentUser.uid') + '/ratings/' + model.movie.id + "/movieTitle"] = model.movie.title;
+             let userId = this.get('session.currentUser.uid');
+          
+             fanoutObject[`users/${'userId'}/ratings/${'movie.id'}/value`] = rating;
+             fanoutObject[`users/${'userId'}/ratings/${'movie.id'}/posterPath`] = movie.poster_path;
+             fanoutObject[`users/${'userId'}/ratings/${'movie.id'}/movieTitle`] = movie.title;
+
              this.get('firebaseUtil').update(fanoutObject).then(() => {
 
              }).catch(error => {

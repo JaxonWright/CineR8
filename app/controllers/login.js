@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
-        loginWithGoogle: function(){
+        loginWithGoogle() {
             var self = this;
              this.get('session').open('firebase', { 
                  provider: 'google'
@@ -29,17 +29,16 @@ export default Ember.Controller.extend({
             });
             
         },
-        loginWithEmail: function(){
-            var self = this;
+        loginWithEmail() {
             var email = document.getElementById('email').value;
             var pass = document.getElementById('password').value;
             this.get('session').open('firebase', {
                 provider: 'password',
                 email: email,
                 password: pass
-            }).then(function() {
+            }).then(() => {
                 self.transitionToRoute('application');
-            }, function() {
+            }, () => {
                 alert("Failure");
             });
         } 
