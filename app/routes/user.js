@@ -6,5 +6,8 @@ export default Ember.Route.extend({
             orderBy: 'username',
             equalTo: params.username
         }).then((model) => model.get('firstObject'))
+    },
+    titleToken(model) {
+        return 'User - ' + model.get('username');
     }
 });

@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  title(tokens) {
+    return 'CineR8 - ' + tokens.join(' - ');
+  },
+
   session: Ember.inject.service(),
 
   beforeModel() {

@@ -6,6 +6,10 @@ export default Ember.Route.extend({
              refreshModel: true
         }
     },
+
+    titleToken(model) {
+        return 'Search - ' + model.query
+    },
   
     model({ value }) {
         let query = value;

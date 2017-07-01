@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+    titleToken(model) {
+        return model.movie.title;
+    },
     model({ movie_id }) {
         let userId = this.get('session.currentUser.uid');
         let movie = Ember.$.getJSON(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=0910db5745f86638474ffefa5d3ba687&append_to_response=videos,credits`);
