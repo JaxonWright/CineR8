@@ -42,24 +42,30 @@
        {{/if}}
     </div>
     <div class="col-lg-2 col-md-3 col-sm-3">
+      {{#if model.movieOMDb.imdbRating}}
        <div class="panel panel-default">
           <div class="panel-heading imdb">
              <center><h3 class="panel-title"><img src="../../images/imdb.png" width="35%"></h3></center>
            </div>
            <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.imdbRating}}</strong>/10</h2></center></div>
        </div>
+       {{/if}}
+       {{#if (eq model.movieOMDb.Ratings.1.Source 'Rotten Tomatoes')}}
        <div class="panel panel-default">
           <div class="panel-heading tomato">
              <center><h3 class="panel-title"><img src="../../images/rt.png" width="45%"></h3></center>
            </div>
            <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.Ratings.1.Value}}</strong></h2></center></div>
        </div>
+       {{/if}}
+       {{#if model.movieOMDb.Metascore}}
        <div class="panel panel-default">
           <div class="panel-heading meta">
              <center><h3 class="panel-title"><img src="../../images/meta.png" width="50%"></h3></center>
            </div>
            <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.Metascore}}</strong>/100</h2></center></div>
        </div>
+       {{/if}}
        <div id="avgUserRating" class="panel panel-default">
           <div class="panel-heading tmdb">
             <center><h3 class="panel-title"><img src="../../images/tmdbg.png" width="25%"></h3></center>
