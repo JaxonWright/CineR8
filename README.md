@@ -23,7 +23,7 @@ Screenshots
 
 Technical Details
 -----------
-The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust Javascript framework. All of the movie information is pulled from [TheMovieDB](https://www.themoviedb.org/) via their API. User authentication and ratings are stored using Google's [Firebase](https://firebase.google.com) real-time database. The only personal information stored is the user's email, of which is not visible to others and is not shared by CineR8 anywhere.
+The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust Javascript framework. All of the movie information is pulled from [TheMovieDB](https://www.themoviedb.org/) via their API. Movie ratings from 3rd party services are pulled from the [OMDb API](http://www.omdbapi.com/). User authentication and ratings are stored using Google's [Firebase](https://firebase.google.com) real-time database. The only personal information stored is the user's email, of which is not visible to others and is not shared by CineR8 anywhere.
 
 ### Ember Addons Used
 * [ember-cli](https://ember-cli.com/) - Commandline Interface for Ember
