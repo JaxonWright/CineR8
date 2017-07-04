@@ -13,7 +13,7 @@ Screenshots
 <img src="http://i.imgur.com/ThJ8PVW.png"/>
 
 ### Movie Listing Page
-<img src="http://i.imgur.com/6777tp6.png"/>
+<img src="http://i.imgur.com/1QTYumU.png"/>
 
 ### User Page
 <img src="http://i.imgur.com/he1IsXT.png"/>
@@ -33,6 +33,7 @@ The Web app is built using [Ember.js](https://www.emberjs.com/), a very robust J
 * [ember-moment](https://www.npmjs.com/package/ember-moment) - Easy way to format date strings
 * [ember-cli-document-title](https://github.com/kimroen/ember-cli-document-title) - Easy way to dynamically change page title
 * [ember-cli-head](https://github.com/ronco/ember-cli-head) - Easy way to dynamically change items in document head
+* [ember-truth-helpers](https://github.com/jmurphyau/ember-truth-helpers) - truth logic conditionals within handlebars
 
 ### Other Addons
 * [Bootstrap](http://getbootstrap.com/)
