@@ -11,10 +11,17 @@ export default Ember.Route.extend({
             //error
             alert(error);
         })
-
         return Ember.RSVP.hash({
             movie,
             userRating
         });
+    },
+    afterModel(model) {
+        this._super(model);
+        Ember.RSVP.hash({
+            tmp: Ember.$.getJSON("https://omdbapi.com/?apikey=8084da1&i=" + model.movie.imdb_id)
+        }).then(hash => {
+            Ember.set(model, 'movieOMDb', hash.tmp);
+        })
     }
 });

@@ -21,26 +21,11 @@
             {{/each}}
           </div>
       </p>
-    </div>
-    <div class="col-lg-2 col-md-3 col-sm-3">
-       <div class="panel panel-default">
-          <div class="panel-heading">
-             <h3 class="panel-title">IMDb Rating</h3>
-           </div>
-           <div class="panel-body" id="imdbRating"><center><h2><strong>0</strong>/10</h2></center></div>
-       </div>
-       <div id="avgUserRating" class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Avg User Rating</h3>
-          </div>
-          <div class="panel-body" id="avgUserRating">
-            <center><h2 id="avg"><strong>{{model.movie.vote_average}}</strong>/10</h2></center>
-          </div>
-       </div>
        {{#if session.isAuthenticated}}
+       <br/>
        <div id="userRating" class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Your Rating</h3>
+            <center><h3 class="panel-title">Your Rating</h3></center>
           </div>
           <div class="panel-body" id="userRating">
             {{#if model.userRating.value}}
@@ -55,5 +40,34 @@
           </div>
        </div>
        {{/if}}
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-3">
+       <div class="panel panel-default">
+          <div class="panel-heading imdb">
+             <center><h3 class="panel-title"><img src="../../images/imdb.png" width="35%"></h3></center>
+           </div>
+           <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.imdbRating}}</strong>/10</h2></center></div>
+       </div>
+       <div class="panel panel-default">
+          <div class="panel-heading tomato">
+             <center><h3 class="panel-title"><img src="../../images/rt.png" width="45%"></h3></center>
+           </div>
+           <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.Ratings.1.Value}}</strong></h2></center></div>
+       </div>
+       <div class="panel panel-default">
+          <div class="panel-heading meta">
+             <center><h3 class="panel-title"><img src="../../images/meta.png" width="50%"></h3></center>
+           </div>
+           <div class="panel-body" id="imdbRating"><center><h2><strong>{{model.movieOMDb.Metascore}}</strong>/100</h2></center></div>
+       </div>
+       <div id="avgUserRating" class="panel panel-default">
+          <div class="panel-heading tmdb">
+            <center><h3 class="panel-title"><img src="../../images/tmdbg.png" width="25%"></h3></center>
+          </div>
+          <div class="panel-body" id="avgUserRating">
+            <center><h2 id="avg"><strong>{{model.movie.vote_average}}</strong>/10</h2></center>
+          </div>
+       </div>
+      
     </div>
 </div>

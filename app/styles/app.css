@@ -3,10 +3,31 @@ body {
     background-color: #d0dde6;
 }
 
+.panel-heading.imdb {
+    background-color: #333 !important;
+}
+
+.panel-heading.tomato {
+    background-color: #669c41 !important;
+}
+
+.panel-heading.meta {
+    background-color: #000 !important;
+}
+
+.panel-heading.tmdb {
+    background-color: #081c24 !important;
+}
+
+
 .search-form {
  margin: 0.9% 0px 0.9% 0px; 
  padding: 0px 0px 0px 0px;
  background: rgba(255,255,255,.13);
+}
+
+.panel-body h2 {
+    margin: 5px 5px 5px 5px; 
 }
 
 h2.userRating {
