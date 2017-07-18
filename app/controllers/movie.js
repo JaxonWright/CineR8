@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
             let userId = this.get('session.currentUser.uid');
             fanoutObject[`users/${userId}/ratings/${movie.id}`] = null;
 
-           this.get('firebaseUtil').update(fanoutObject).then((result) => {
+           this.get('firebaseUtil').update(fanoutObject).then(() => {
             }).catch(error => {
                 alert(error);
             });
@@ -51,7 +51,7 @@ export default Ember.Controller.extend({
             let userId = this.get('session.currentUser.uid');
             fanoutObject[`users/${userId}/wannaSees/${movie.id}`] = null;
 
-           this.get('firebaseUtil').update(fanoutObject).then((result) => {
+           this.get('firebaseUtil').update(fanoutObject).then(() => {
                 Ember.set(model, 'wannaSee', false);
             }).catch(error => {
                 alert(error);
