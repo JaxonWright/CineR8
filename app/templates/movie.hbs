@@ -25,7 +25,7 @@
        <br/>
        {{#if (not model.userRating.value)}}
           {{#if (not model.wannaSee)}}
-            <button class="btn btin-raised btn-standard" {{action "wannaSee" model}}>☐ Wanna See</button>
+            <button class="btn btn-raised btn-standard" {{action "wannaSee" model}}>☐ Wanna See</button>
           {{else}}
               <button class="btn btn-raised btn-primary" {{action "dontWannaSee" model}}>🗹 Wanna See</button>
           {{/if}}
@@ -36,11 +36,13 @@
           </div>
           <div class="panel-body" id="userRating">
             {{#if model.userRating.value}}
-              <center><h2 class="userRating"><strong>{{model.userRating.value}}</strong>/10</h2>
-              <h5>{{star-rating item=model rating=model.userRating.value on-click=(action "updateRating") maxRating=10}}</h5>
+              <center><h2 class="userRating">
+                <button class="btn btn-xs btn-warning remove-rating" {{action "removeRating" model}}><span class="glyphicon glyphicon-remove remove-rating" ></span></button><strong>{{model.userRating.value}}</strong>/10</h2>
+              <h5>
+              {{star-rating item=model rating=model.userRating.value on-click=(action "updateRating") maxRating=10}}</h5>
               </center>
             {{else}}
-              <center><h2 class="userRating">N/A</h2>
+              <center><h2 class="userRatingNA">N/A</h2>
               <h5>{{star-rating item=model rating=0 on-click=(action "updateRating") maxRating=10}}</h5>
               </center>
             {{/if}}

@@ -19,6 +19,17 @@ export default Ember.Controller.extend({
              });
             
         },
+        removeRating(model) {
+            let movie = model.movie;
+            let fanoutObject = {};
+            let userId = this.get('session.currentUser.uid');
+            fanoutObject[`users/${userId}/ratings/${movie.id}`] = null;
+
+           this.get('firebaseUtil').update(fanoutObject).then((result) => {
+            }).catch(error => {
+                alert(error);
+            });
+        },
         wannaSee(model) {
             let movie = model.movie;
             let fanoutObject = {};
