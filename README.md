@@ -7,19 +7,36 @@ CineR8 *(Pronounced Cine [like in Cinema]-Rate)* is an easy-to-use and very clea
 Screenshots
 ----------
 ### Home Page
+<details>
+<summary>Show</summary>
 <img src="http://i.imgur.com/wQAyNnQ.jpg"/>
+</details>
 
 ### Search Results Page
+<details>
+<summary>Show</summary>
 <img src="http://i.imgur.com/ThJ8PVW.png"/>
+</details>
 
 ### Movie Listing Page
-<img src="http://i.imgur.com/1QTYumU.png"/>
+<details>
+<summary>Show</summary>
+<img src="http://i.imgur.com/vaXnpec.png"/>
+<img src="http://i.imgur.com/RplQdw3.png"/>
+</details>
 
 ### User Page
-<img src="http://i.imgur.com/he1IsXT.png"/>
+<details>
+<summary>Show</summary>
+<img src="http://i.imgur.com/JLFoUUI.png"/>
+<img src="http://i.imgur.com/8hVfya8.png"/>
+</details>
 
 ### Login Page
+<details>
+<summary>Show</summary>
 <img src="http://i.imgur.com/7FTCpHA.png"/>
+</details>
 
 Technical Details
 -----------
