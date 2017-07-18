@@ -1,20 +1,47 @@
 {{#if model.username}}
     <h1>{{model.username}}</h1>
-    <h3>Ratings</h3>
-    <table class="table table-hover">
-        <thead>
-            <th><h4><b>Title</b></h4></th>
-            <th><h4><b>Rating</b></h4></th>
-        </thead>
-        <tbody>
-            {{#each model.ratings as |rating|}}
-                {{#link-to 'movie' rating.id tagName="tr" class="active"}}
-                    <td><h3>{{rating.movieTitle}}</h3></td>
-                    <td><h3><strong>{{rating.value}}</strong>/10</h3></td>
-                {{/link-to}}
-            {{/each}}
-        </tbody>
-    </table>
+    <div class="bs-component">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#ratings" data-toggle="tab">Ratings</a>
+            </li>
+            <li>
+                <a href="#wanna-see" data-toggle="tab">Wanna See</a>
+            </li>
+        </ul>
+        <div id="tabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="ratings">
+                <table class="table table-hover">
+                    <thead>
+                        <th><h4><b>Title</b></h4></th>
+                        <th><h4><b>Rating</b></h4></th>
+                    </thead>
+                    <tbody>
+                        {{#each model.ratings as |rating|}}
+                            {{#link-to 'movie' rating.id tagName="tr" class="active"}}
+                                <td><h3>{{rating.movieTitle}}</h3></td>
+                                <td><h3><strong>{{rating.value}}</strong>/10</h3></td>
+                            {{/link-to}}
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="wanna-see">
+                <table class="table table-hover">
+                    <thead>
+                        <th><h4><b>Title</b></h4></th>
+                    </thead>
+                    <tbody>
+                        {{#each model.wannaSees as |movie|}}
+                            {{#link-to 'movie' movie.id tagName="tr" class="active"}}
+                                <td><h3>{{movie.movieTitle}}</h3></td>
+                            {{/link-to}}
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 {{else}}
     <h1>Unknown User</h1>
 {{/if}}

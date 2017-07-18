@@ -5,6 +5,8 @@ export default Ember.Controller.extend({
         updateRating({ item: model, rating }) {
              let fanoutObject = {};
              let userId = this.get('session.currentUser.uid');
+
+             this.send('dontWannaSee', model);
           
              fanoutObject[`users/${userId}/ratings/${model.movie.id}/value`] = rating;
              fanoutObject[`users/${userId}/ratings/${model.movie.id}/posterPath`] = model.movie.poster_path;
@@ -16,6 +18,33 @@ export default Ember.Controller.extend({
                 alert(error);
              });
             
+        },
+        wannaSee(model) {
+            let movie = model.movie;
+            let fanoutObject = {};
+            let userId = this.get('session.currentUser.uid');
+          
+            fanoutObject[`users/${userId}/wannaSees/${movie.id}/posterPath`] = movie.poster_path;
+            fanoutObject[`users/${userId}/wannaSees/${movie.id}/movieTitle`] = movie.title;
+
+            this.get('firebaseUtil').update(fanoutObject).then(() => {
+                Ember.set(model, 'wannaSee', true);
+            }).catch(error => {
+                alert(error);
+            });
+             
+        },
+        dontWannaSee(model) {
+            let movie = model.movie;
+            let fanoutObject = {};
+            let userId = this.get('session.currentUser.uid');
+            fanoutObject[`users/${userId}/wannaSees/${movie.id}`] = null;
+
+           this.get('firebaseUtil').update(fanoutObject).then((result) => {
+                Ember.set(model, 'wannaSee', false);
+            }).catch(error => {
+                alert(error);
+            });
         }
     }
 });

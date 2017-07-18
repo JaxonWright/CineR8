@@ -11,9 +11,11 @@ export default Ember.Route.extend({
             //error
             alert(error);
         })
+        let wannaSee = this.get('firebaseUtil').isRecordExisting(`users/${userId}/wannaSees/${movie_id}`)
         return Ember.RSVP.hash({
             movie,
-            userRating
+            userRating,
+            wannaSee
         });
     },
     afterModel(model) {

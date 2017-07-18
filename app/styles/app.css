@@ -19,6 +19,13 @@ body {
     background-color: #081c24 !important;
 }
 
+.nav.nav-tabs {
+    background-color: #09314b !important;
+}
+
+.nav.nav-tabs li.active {
+     background-color: #22465d !important;
+}
 
 .search-form {
  margin: 0.9% 0px 0.9% 0px; 

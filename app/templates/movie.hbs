@@ -23,6 +23,13 @@
       </p>
        {{#if session.isAuthenticated}}
        <br/>
+       {{#if (not model.userRating.value)}}
+          {{#if (not model.wannaSee)}}
+            <button class="btn btin-raised btn-standard" {{action "wannaSee" model}}>☐ Wanna See</button>
+          {{else}}
+              <button class="btn btn-raised btn-primary" {{action "dontWannaSee" model}}>🗹 Wanna See</button>
+          {{/if}}
+       {{/if}}
        <div id="userRating" class="panel panel-primary">
           <div class="panel-heading">
             <center><h3 class="panel-title">Your Rating</h3></center>
