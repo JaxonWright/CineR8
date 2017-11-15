@@ -1,6 +1,40 @@
 body { 
     padding-top: 82px;
     background-color: #d0dde6;
+    position: relative;
+    margin: 0;
+    padding-bottom: 15rem;
+    min-height: 100%;
+}
+
+ html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    border-top: 3px solid #abb5bd;
+    background-color: #bcc7cf;
+    padding-bottom: 20px;
+    color: #9ca6ad;
+  }
+
+footer a {
+    color: #9ca6ad;
+}
+footer a:hover {
+   color: #09314b;
 }
 
 .panel-heading.imdb {
@@ -78,20 +112,7 @@ h5 {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 15px rgba(208, 221, 230, 0.8);
 }
 
-footer {
-    margin-top: 40px;
-    padding-top: 40px;
-    border-top: 3px solid #abb5bd;
-    background-color: #bcc7cf;
-    padding-bottom: 20px;
-    color: #9ca6ad;
-}
-footer a {
-    color: #9ca6ad;
-}
-footer a:hover {
-   color: #09314b;
-}
+
 
 .poster {
     margin:8px;
